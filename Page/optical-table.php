@@ -4,12 +4,10 @@ include('./models/function-page.php');
 include("./utils/db.php");
 
 if (isset($_POST['ajout-client'])) {
-    if (potentielClient::ajoutClient($_POST, $pdo)) {
-    }
+    potentielClient::ajoutClient($_POST, $pdo);
 }
 if (isset($_POST['delete'])) {
-    if (potentielClient::deleteClient($pdo, $_POST)) {
-    }
+    potentielClient::deleteClient($pdo, $_POST);
 }
 
 
@@ -83,8 +81,7 @@ if (isset($_POST['delete'])) {
 
     <div class="tableau">
         <?php
-        if (potentielClient::tableauClient($pdo)) {
-        }
+        potentielClient::tableauClient($pdo)
 
         ?>
 
